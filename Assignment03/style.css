@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef4fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main.score-wrap {
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 750px;
+  width: 100%;
+}
+/* Left Section */
+section.left {
+  flex: 1;
+  background: linear-gradient(to bottom, #6e39ff, #3126d2);
+  color: #fff;
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 20px;
+}
+section.left header h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.score-circle {
+  background: rgba(255, 255, 255, 0.1);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto 20px;
+}
+
+.score-circle strong {
+  font-size: 48px;
+  font-weight: bold;
+}
+.score-circle span {
+  font-size: 14px;
+  opacity: 0.9;
+}
+section.left h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+section.left p {
+  font-size: 14px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+/* Right Section */
+section.right {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.right header h2 {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+article.metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.reaction {
+  background: #fff0f0;
+  color: #d9534f;
+}
+.memory {
+  background: #fff8e1;
+  color: #f0ad4e;
+}
+.verbal {
+  background: #e6fff5;
+  color: #5cb85c;
+}
+.visual {
+  background: #f0f2ff;
+  color: #5bc0de;
+}
+
+article.metric span {
+  color: #333;
+}
+footer {
+  margin-top: 30px;
+}
+
+footer button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #5938ff, #3c2bff);
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+footer button:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main.card {
+    flex-direction: column;
+  }
+}
