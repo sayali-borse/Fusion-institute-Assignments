@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment02</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1 style="text-align: center">
+      Create a simple registration form for a website with the following fields:
+    </h1>
+    <form
+      style="text-align: center"
+      action="http://www.google.com"
+      target="_blank"
+    >
+      <label>Name :</label>
+      <input type="text" required />
+      <br />
+      <br />
+      <label>Email :</label>
+      <input type="Email" required />
+      <br /><br />
+      <label>Password:</label>
+      <input type="password" required minlength="5" maxlength="10" />
+      <br /><br />
+      <!-- Gender (radio buttons: Male, Female, Other) -->
+      <label for="gender">Gender</label>
+      <input type="radio" name="gender" value="male" />Male
+      <input type="radio" name="gender" value="male" />Female
+      <input type="radio" name="gender" value="male" />other
+
+      <br />
+      <br />
+      <!-- Birthday (date input) -->
+      <label>Birthday</label>
+      <input type="date" required />
+      <br />
+      <br />
+      <!-- Agree to Terms and Conditions (checkbox) -->
+      <input type="checkbox" name="checkbox" required />
+      <label for="checkbox"><small>Agree to Terms and Conditions</small></label>
+      <br />
+      <br />
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        style="
+          background-color: rgb(73, 188, 226);
+          border-radius: 5px;
+          padding: 10px;
+        "
+      >
+        Submit
+      </button>
+    </form>
+  </body>
+</html>
