@@ -6,13 +6,13 @@
     <title>JavaScript Assignment</title>
   </head>
   <body>
-    <h1 id="title">Old Title</h1>
+    <h1 id="title">This is an assignment of DOM manupulation</h1>
 
     <ul id="list">
       <li>Existing Item</li>
     </ul>
 
-    <h2>Heading 1</h2>
+    <h2>Heading...1</h2>
     <h3>Heading 2</h3>
     <p>This is Paragraph</p>
 
@@ -25,24 +25,24 @@
       let ul = document.getElementById("list");
 
       let list1 = document.createElement("li");
-      li1.textContent = "Fruits";
+      list1.textContent = "Fruits";
       ul.appendChild(list1);
 
       let list2 = document.createElement("li");
-      li2.textContent = "Books";
+      list2.textContent = "Books";
       ul.appendChild(list2);
 
       let list3 = document.createElement("li");
-      li3.textContent = "Food";
+      list3.textContent = "Food";
       ul.appendChild(list3);
 
       let list4 = document.createElement("li");
-      li4.textContent = "Vinay";
+      list4.textContent = "Vinay";
       ul.appendChild(list4);
 
       // ---------------------Q3-------
 
-      let headings = document.getElementsByTagName("h1");
+      let headings = document.getElementsByTagName("h2");
       console.log(headings[0].textContent);
 
       let para = document.getElementsByTagName("p")[0];
