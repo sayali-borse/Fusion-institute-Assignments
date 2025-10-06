@@ -5,5 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM-Manupulation</title>
   </head>
-  <body></body>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <body>
+        <h1 id="title">Javascript- Assignments</h1>
+        <p id="info">DOM manupulation....!</p>
+        <button id="btn">Click Me !</button>
+
+        <script>
+          let heading = document.getElementById("title");
+          console.log(heading.innerText);
+
+          // Example 2
+          let paragraph = document.getElementById("info");
+          paragraph.innerText = "This is updated text!";
+
+          // Example 3
+          let button = document.getElementById("btn");
+          button.style.backgroundColor = "lightblue";
+        </script>
+      </body>
+    </html>
+  </body>
 </html>
