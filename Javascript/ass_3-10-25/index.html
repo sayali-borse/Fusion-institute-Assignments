@@ -3,51 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Intro</title>
+    <title>JavaScript Introduction</title>
     <link rel="stylesheet" href="styel.css" />
   </head>
   <body>
     <div class="container">
       <h1>JAVASCRIPT</h1>
       <hr />
+
       <div class="intro">
-        <ul>
-          <li>
-            JavaScript (JS) is a high-level, interpreted programming language.
-          </li>
-          <li>It was created in 1995 by <b>Brendan Eich</b>.</li>
-          <li>
-            Runs directly in the browser to make web pages dynamic and
-            interactive.
-          </li>
-          <li>
-            Together with HTML (structure) and CSS (styling), JavaScript is the
-            third core technology of the web.
-          </li>
+        <ul id="introList">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
       </div>
 
       <div class="content">
         <div class="features">
           <h2>Features of JavaScript</h2>
-          <ol>
-            <li>Lightweight & Easy to Learn</li>
-            <li>Cross-platform (runs on all browsers & OS)</li>
-            <li>Event-driven (reacts to clicks, inputs, etc.)</li>
-            <li>Object-Oriented (can create objects, use prototypes)</li>
+          <ol id="featureList">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
           </ol>
         </div>
 
         <div class="usage">
           <h2>Where is JavaScript Used?</h2>
-          <ol>
-            <li>Web Development (Frontend): Forms, animations, validations.</li>
-            <li>Backend Development: Server-side apps with Node.js.</li>
-            <li>Mobile Apps: React Native, Ionic.</li>
-            <li>Game Development: Phaser.js, Babylon.js.</li>
+          <ol id="usageList">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
           </ol>
         </div>
       </div>
     </div>
+
+    <!-- JavaScript: dynamically fill all list items -->
+    <script>
+      const introList = document.querySelectorAll("#introList li");
+      introList[0].textContent =
+        "JavaScript (JS) is a high-level, interpreted programming language.";
+      introList[1].textContent = "It was created in 1995 by Brendan Eich.";
+      introList[2].textContent =
+        "Runs directly in the browser to make web pages dynamic and interactive.";
+      introList[3].textContent =
+        "Together with HTML (structure) and CSS (styling), JavaScript is the third core technology of the web.";
+
+      // Features Section
+      const featureList = document.querySelectorAll("#featureList li");
+      featureList[0].textContent = " Lightweight & Easy to Learn";
+      featureList[1].textContent =
+        " Cross-platform (runs on all browsers & OS)";
+      featureList[2].textContent =
+        "Event-driven (reacts to clicks, inputs, etc.";
+      featureList[3].textContent =
+        " Object-Oriented (can create objects, use prototypes";
+
+      // Usage Section
+
+      const usageList = document.querySelectorAll("#usageList li");
+      usageList[0].textContent =
+        "Web Development (Frontend): Forms, animations, validations.";
+      usageList[1].textContent =
+        "Backend Development: Server-side apps with Node.js";
+      usageList[2].textContent = "Mobile Apps: React Native, Ionic.";
+      usageList[3].textContent = "Game Development: Phaser.js, Babylon.js.";
+    </script>
   </body>
 </html>
