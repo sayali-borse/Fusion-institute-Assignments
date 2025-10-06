@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Introduction</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 40px;
+      }
+
+      .container {
+        max-width: 1000px;
+        background: #fff;
+        border: 1px solid #ddd;
+        margin: auto;
+        padding: 40px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #e91e63;
+        letter-spacing: 2px;
+      }
+
+      hr {
+        margin: 20px 0;
+        border: 0.5px solid #ccc;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+        padding-left: 25px;
+        line-height: 1.8;
+      }
+
+      li {
+        font-size: 16px;
+        color: #333;
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+
+      .features,
+      .usage {
+        width: 48%;
+      }
+
+      .features h2 {
+        color: #4caf50;
+      }
+
+      .usage h2 {
+        color: #ff9800;
+      }
+
+      .intro ul li {
+        list-style-type: disc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>JAVASCRIPT</h1>
+      <hr />
+
+      <div class="intro">
+        <ul id="introList">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <div class="features">
+          <h2>Features of JavaScript</h2>
+          <ol id="featureList">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
+
+        <div class="usage">
+          <h2>Where is JavaScript Used?</h2>
+          <ol id="usageList">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript: dynamically fill all list items -->
+    <script>
+      // Intro Section
+      const introPoints = [
+        "JavaScript (JS) is a high-level, interpreted programming language.",
+        "It was created in 1995 by Brendan Eich.",
+        "Runs directly in the browser to make web pages dynamic and interactive.",
+        "Together with HTML (structure) and CSS (styling), JavaScript is the third core technology of the web.",
+      ];
+
+      const introList = document.querySelectorAll("#introList li");
+      introPoints.forEach((text, i) => (introList[i].textContent = text));
+
+      // Features Section
+      const features = [
+        "Lightweight & Easy to Learn",
+        "Cross-platform (runs on all browsers & OS)",
+        "Event-driven (reacts to clicks, inputs, etc.)",
+        "Object-Oriented (can create objects, use prototypes)",
+      ];
+
+      const featureList = document.querySelectorAll("#featureList li");
+      features.forEach((text, i) => (featureList[i].textContent = text));
+
+      // Usage Section
+      const usages = [
+        "Web Development (Frontend): Forms, animations, validations.",
+        "Backend Development: Server-side apps with Node.js.",
+        "Mobile Apps: React Native, Ionic.",
+        "Game Development: Phaser.js, Babylon.js.",
+      ];
+
+      const usageList = document.querySelectorAll("#usageList li");
+      usages.forEach((text, i) => (usageList[i].textContent = text));
+    </script>
+  </body>
+</html>
