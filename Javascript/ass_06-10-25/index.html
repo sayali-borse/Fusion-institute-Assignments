@@ -22,10 +22,13 @@
         </p>
 
         <!--  -->
-        <h1 id="Heading">Welcome to My Page</h1>
+        <h1 id="mainHeading">Welcome to My Page</h1>
         <p>This is paragraph 1</p>
         <p>This is paragraph 2</p>
         <p>This is paragraph 3</p>
+
+        <!-- How can you change the text inside an HTML element? -->
+        <h2 id="msg">Old Message</h2>
 
         <script>
           // ---------1] How do you select an element by ID in the DOM? Write a program with 3 examples.
@@ -57,10 +60,15 @@
           mainHeading.innerText = "Heading Changed using getElementById()";
 
           // Using getElementsByTagName()
-          let paragraphs = document.getElementsByTagName("p");
+          let para = document.getElementsByTagName("p");
+          console.log(para);
 
           // Access specific paragraph
-          paragraphs[2].textContent = "This is the second paragraph - changed!";
+          para[5].textContent = "This is the second paragraph - changed!"; // It itterate all <p> tags from document
+
+          // 4] How can you change the text inside an HTML element?
+          let message = document.getElementById("msg");
+          message.innerText = "New Message Updated!";
         </script>
       </body>
     </html>
