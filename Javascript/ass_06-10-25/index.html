@@ -9,11 +9,12 @@
     <!DOCTYPE html>
     <html>
       <body>
+        <!-- 1] -->
         <h1 id="title">Javascript- Assignments</h1>
         <p id="info">DOM manupulation....!</p>
         <button id="btn">Click Me !</button>
 
-        <!--elements with  class name  -->
+        <!-- 2]elements with  class name  -->
         <p class="text">Hello Javascript</p>
         <p class="text">Welcome</p>
         <p class="text">
@@ -21,14 +22,17 @@
           incidunt!
         </p>
 
-        <!--  -->
+        <!-- 3] -->
         <h1 id="mainHeading">Welcome to My Page</h1>
         <p>This is paragraph 1</p>
         <p>This is paragraph 2</p>
         <p>This is paragraph 3</p>
 
-        <!-- How can you change the text inside an HTML element? -->
+        <!--4] How can you change the text inside an HTML element? -->
         <h2 id="msg">Old Message</h2>
+
+        <!--5] How do you change the style of an HTML element? -->
+        <h2 id="styleElement">HTML Style Element</h2>
 
         <script>
           // ---------1] How do you select an element by ID in the DOM? Write a program with 3 examples.
@@ -69,6 +73,12 @@
           // 4] How can you change the text inside an HTML element?
           let message = document.getElementById("msg");
           message.innerText = "New Message Updated!";
+
+          // 5]How do you change the style of an HTML element?
+          let styleElement = document.getElementById("styleElement");
+          styleElement.style.color = "blue";
+          styleElement.style.fontSize = "30px";
+          styleElement.style.backgroundColor = "lightpink";
         </script>
       </body>
     </html>
