@@ -13,17 +13,54 @@
         <p id="info">DOM manupulation....!</p>
         <button id="btn">Click Me !</button>
 
+        <!--elements with  class name  -->
+        <p class="text">Hello Javascript</p>
+        <p class="text">Welcome</p>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+          incidunt!
+        </p>
+
+        <!--  -->
+        <h1 id="Heading">Welcome to My Page</h1>
+        <p>This is paragraph 1</p>
+        <p>This is paragraph 2</p>
+        <p>This is paragraph 3</p>
+
         <script>
+          // ---------1] How do you select an element by ID in the DOM? Write a program with 3 examples.
           let heading = document.getElementById("title");
           console.log(heading.innerText);
 
-          // Example 2
           let paragraph = document.getElementById("info");
           paragraph.innerText = "This is updated text!";
 
-          // Example 3
           let button = document.getElementById("btn");
           button.style.backgroundColor = "lightblue";
+
+          //  2️]  How do you select elements by class name?
+          let paragraphs = document.getElementsByClassName("text");
+
+          paragraphs[0].textContent = "Hi there!";
+
+          paragraphs[1].style.color = "blue";
+
+          paragraphs[2].style.fontWeight = "bold";
+
+          // 3] What is the difference between getElementById() and getElementByTagName()? Explain with example.
+
+          // The main difference between getElementById() and getElementsByTagName() is that getElementById() is used to select a single HTML element using its unique ID, while getElementsByTagName() is used to select multiple elements that share the same tag name. The getElementById() method returns only one element because an ID must be unique within a page. On the other hand, getElementsByTagName() returns a collection (HTMLCollection) of all elements with the specified tag, such as all <p> or <div> tags. For example, document.getElementById("title") selects the element with the ID “title,” while document.getElementsByTagName("p") selects all paragraph elements in the document.
+
+          //Using getElementById()
+          let mainHeading = document.getElementById("mainHeading");
+          mainHeading.style.color = "blue";
+          mainHeading.innerText = "Heading Changed using getElementById()";
+
+          // Using getElementsByTagName()
+          let paragraphs = document.getElementsByTagName("p");
+
+          // Access specific paragraph
+          paragraphs[2].textContent = "This is the second paragraph - changed!";
         </script>
       </body>
     </html>
