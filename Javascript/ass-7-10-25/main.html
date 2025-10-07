@@ -9,16 +9,18 @@
     <!-- 1] Creates a new HTML element -->
     <h2>Create a new HTML element (but not inserted yet)</h2>
     <h2>Creating Elements Dynamically</h2>
+    <hr />
 
     <script>
-      // Example 1: Create a new paragraph element
+      // 1] Create a new paragraph element
       let newPara = document.createElement("p");
       newPara.textContent = "This is a paragraph created using JavaScript.";
 
-      console.log(newPara);
+      //document.body.append(newPara);
 
       let newButton = document.createElement("button");
       newButton.textContent = "Click Me";
+      document.body.append(newButton);
     </script>
   </body>
 </html>
