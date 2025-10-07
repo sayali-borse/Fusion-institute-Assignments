@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1] Creates a new HTML element -->
+    <h2>Create a new HTML element (but not inserted yet)</h2>
+    <h2>Creating Elements Dynamically</h2>
+
+    <script>
+      // Example 1: Create a new paragraph element
+      let newPara = document.createElement("p");
+      newPara.textContent = "This is a paragraph created using JavaScript.";
+
+      console.log(newPara);
+
+      let newButton = document.createElement("button");
+      newButton.textContent = "Click Me";
+    </script>
+  </body>
+</html>
