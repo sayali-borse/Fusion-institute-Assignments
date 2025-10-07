@@ -12,11 +12,15 @@
     <hr />
     <h3>Create a new HTML element</h3>
     <div id="createElementDemo"></div>
+
     <hr />
+    <br />
+    <br />
 
     <img id="profile" src="user.jpg" alt="User Profile" />
     <a id="link" href="https://google.com" target="_blank">Google</a>
     <input id="username" type="text" value="Sayali" />
+    <br />
 
     <hr />
 
@@ -27,12 +31,16 @@
     <input id="emailInput" type="text" />
     <button id="btn">Click Me</button>
 
-    <h3>4️⃣ Get or set HTML markup inside an element</h3>
+    <hr />
+
+    <h3>Get or set HTML markup inside an element</h3>
     <div id="container"><p>Hello</p></div>
     <section id="infoSection"></section>
     <div id="content"></div>
 
-    <h3>5️⃣ querySelector() Example</h3>
+    <hr />
+
+    <h3>querySelector()</h3>
     <p class="msg">First</p>
     <p class="msg">Second</p>
 
@@ -40,17 +48,17 @@
       // -----Create a new HTML element
 
       let newDiv = document.createElement("div");
-      newDiv.textContent =
-        "Example 1: This is a new div created using createElement()";
+      newDiv.textContent = " This is a new div created using createElement()";
       let newButton = document.createElement("button");
       document.getElementById("createElementDemo").append(newDiv);
 
-      newButton.textContent = "Example 2: Click Me (created dynamically)";
+      newButton.textContent = "Click Me";
       document.getElementById("createElementDemo").append(newButton);
 
       // --------- Get the value of a specific attribute
 
       let imgSrc = document.getElementById("profile");
+
       imgSrc.getAttribute("src");
 
       let linkHref = document.getElementById("link");
@@ -72,7 +80,6 @@
       document
         .getElementById("emailInput")
         .setAttribute("placeholder", "Enter your email");
-      //document.getElementById("btn").setAttribute("disabled", "true");
 
       // ----------  Get or set HTML markup
 
@@ -83,11 +90,11 @@
       document.getElementById("content").innerHTML +=
         "<p>New Paragraph added.</p>";
 
-      // -------------------------------
-      // 5️⃣ querySelector()
-      // -------------------------------
+      // --- querySelector()------
+
       let firstMsg = document.querySelector(".msg");
       console.log("First element with class msg:", firstMsg.textContent); // Output: First
+      let secondMsg = document.querySelector(".msg");
     </script>
   </body>
 </html>
