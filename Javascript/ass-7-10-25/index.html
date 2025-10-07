@@ -12,12 +12,13 @@
     <hr />
     <h3>Create a new HTML element</h3>
     <div id="createElementDemo"></div>
+    <hr />
 
-    <h3>Get the value of a specific attribute</h3>
     <img id="profile" src="user.jpg" alt="User Profile" />
     <a id="link" href="https://google.com" target="_blank">Google</a>
     <input id="username" type="text" value="Sayali" />
-    <div id="getAttributeDemo"></div>
+
+    <hr />
 
     <h3>Set or update an attribute</h3>
     <p id="info">Welcome User!</p>
@@ -49,17 +50,18 @@
 
       // --------- Get the value of a specific attribute
 
-      let imgSrc = document.getElementById("profile").getAttribute("src");
-      let linkTarget = document.getElementById("link").getAttribute("target");
+      let imgSrc = document.getElementById("profile");
+      imgSrc.getAttribute("src");
+
+      let linkHref = document.getElementById("link");
+      linkHref.getAttribute("href");
+      console.log("Link href:", linkHref);
+
+      // Example 3: Get the "value" attribute of an input
       let inputValue = document
         .getElementById("username")
         .getAttribute("value");
-      document.getElementById("getAttributeDemo").innerHTML = `
-      <p>Image src: ${imgSrc}</p>
-      <p>Link target: ${linkTarget}</p>
-      <p>Input value: ${inputValue}</p>
-    `;
-
+      console.log("Input value:", inputValue); // Output: Sayali
       // ---- Set or update an attribute
 
       document.getElementById("info").setAttribute("class", "highlight");
