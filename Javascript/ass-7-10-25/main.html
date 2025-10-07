@@ -17,6 +17,7 @@
     <img id="profile" src="user.jpg" alt="User Profile" />
     <a id="link" href="https://google.com" target="_blank">Google</a>
     <input id="username" type="text" value="Sayali" />
+
     <!-- set attribute -->
     <h3>Set or update an attribute</h3>
     <p id="info">Welcome User!</p>
@@ -24,6 +25,18 @@
     <a id="myLink">FACEBOOK</a>
     <input id="emailInput" type="email" />
     <button id="btn">Click Me</button>
+
+    <!--  Gets or sets the HTML markup inside an element -->
+    <h3>Get or set HTML markup inside an element</h3>
+    <div id="container"><p>Hello</p></div>
+    <section id="infoSection"></section>
+    <div id="content"></div>
+
+    <!-- 5] Returns the first element matching the given CSS selector. -->
+
+    <h3>querySelector()</h3>
+    <p class="msg">First</p>
+    <p class="msg">Second</p>
 
     <script>
       //1]create new element
@@ -56,6 +69,18 @@
       document
         .getElementById("emailInput")
         .setAttribute("placeholder", "Enter your email");
+
+      // 4] Gets or sets the HTML markup inside an element.(3 example)
+      let data = document.getElementById("container").innerHTML;
+      console.log("Container HTML:", data); // logs <p>Hello</p>
+      document.getElementById("infoSection").innerHTML =
+        "<h2>Welcome Sayali!</h2>";
+      document.getElementById("content").innerHTML =
+        "<p>New Paragraph added....</p>";
+
+      // 5]querySelector()
+      let firstMsg = document.querySelector(".msg");
+      console.log("First element with class msg:", firstMsg.textContent);
     </script>
   </body>
 </html>
