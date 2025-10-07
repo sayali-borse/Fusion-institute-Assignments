@@ -3,75 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Assignment - 07/10/2025</title>
+    <title>DOM manupulation</title>
   </head>
   <body>
-    <h1>Today's Assignment - 07/10/2025</h1>
     <h2>DOM Manipulation Examples</h2>
 
+    <!-- 1] Creates a new HTML element -->
     <hr />
     <h3>Create a new HTML element</h3>
     <div id="createElementDemo"></div>
-
-    <hr />
-    <br />
-    <br />
+    <!-- 2] get attribute -->
 
     <img id="profile" src="user.jpg" alt="User Profile" />
     <a id="link" href="https://google.com" target="_blank">Google</a>
     <input id="username" type="text" value="Sayali" />
-    <br />
 
-    <hr />
-
+    <!-- set attribute -->
     <h3>Set or update an attribute</h3>
     <p id="info">Welcome User!</p>
     <img id="logo" />
     <a id="myLink">FACEBOOK</a>
-    <input id="emailInput" type="text" />
+    <input id="emailInput" type="email" />
     <button id="btn">Click Me</button>
 
-    <hr />
-
+    <!--  Gets or sets the HTML markup inside an element -->
     <h3>Get or set HTML markup inside an element</h3>
     <div id="container"><p>Hello</p></div>
     <section id="infoSection"></section>
     <div id="content"></div>
 
-    <hr />
+    <!-- 5] Returns the first element matching the given CSS selector. -->
 
     <h3>querySelector()</h3>
     <p class="msg">First</p>
     <p class="msg">Second</p>
 
     <script>
-      // -----Create a new HTML element
-
+      //1]create new element
       let newDiv = document.createElement("div");
       newDiv.textContent = " This is a new div created using createElement()";
-
       document.getElementById("createElementDemo").append(newDiv);
 
       let newButton = document.createElement("button");
       newButton.textContent = "Click Me";
       document.getElementById("createElementDemo").append(newButton);
 
-      // --------- Get the value of a specific attribute
-
+      //2]Gets the value of a specific attribute from an element.(3 examples)
       let imgSrc = document.getElementById("profile");
-
       imgSrc.getAttribute("src");
 
       let linkHref = document.getElementById("link");
       linkHref.getAttribute("href");
 
-      // Example 3: Get the "value" attribute of an input
       let inputValue = document
         .getElementById("username")
         .getAttribute("value");
-      console.log("Input value:", inputValue); // Output: Sayali
-      // ---- Set or update an attribute
+      console.log(imgSrc, linkHref, inputValue);
 
+      // 3]Sets or updates an attribute for an element. (5 example)
       document.getElementById("info").setAttribute("class", "highlight");
       document.getElementById("logo").setAttribute("src", "logo.png");
       document
@@ -81,8 +70,7 @@
         .getElementById("emailInput")
         .setAttribute("placeholder", "Enter your email");
 
-      // ----------  Get or set HTML markup
-
+      // 4] Gets or sets the HTML markup inside an element.(3 example)
       let data = document.getElementById("container").innerHTML;
       console.log("Container HTML:", data); // logs <p>Hello</p>
       document.getElementById("infoSection").innerHTML =
@@ -90,11 +78,9 @@
       document.getElementById("content").innerHTML =
         "<p>New Paragraph added....</p>";
 
-      // --- querySelector()------
-
+      // 5]querySelector()
       let firstMsg = document.querySelector(".msg");
-      console.log("First element with class msg:", firstMsg.textContent); // Output: First
-      let secondMsg = document.querySelector(".msg");
+      console.log("First element with class msg:", firstMsg.textContent);
     </script>
   </body>
 </html>
